@@ -29,7 +29,7 @@ const Home = () => {
       {/* HERO STAGE */}
       <section className="hero-stage">
         <div className="hero-image-animated">
-          <img src="/images/hero-pan.jpeg" alt="Maryland Wrestling Action Shot" />
+          <img src="images/hero-pan.jpeg" alt="Maryland Wrestling Action Shot" />
         </div>
 
         <div className="hero-overlay">
@@ -54,11 +54,11 @@ const Home = () => {
         <div className="bg-glow-red"></div>
 
         <div className="image-spread">
-          <img src="/images/wrestler1.jpg" alt="Wrestling" className="scatter-img img-L1 fade-on-scroll" />
-          <img src="/images/wrestler2.jpg" alt="Wrestling" className="scatter-img img-L2 fade-on-scroll" />
-          <img src="/images/wrestler3.jpg" alt="Wrestling" className="scatter-img img-L3 fade-on-scroll" /> 
-          <img src="/images/wrestler4.jpg" alt="Wrestling" className="scatter-img img-R1 fade-on-scroll" />
-          <img src="/images/wrestler5.jpg" alt="Wrestling" className="scatter-img img-R2 fade-on-scroll" />
+          <img src="images/wrestler1.jpg" alt="Wrestling" className="scatter-img img-L1 fade-on-scroll" />
+          <img src="images/wrestler2.jpg" alt="Wrestling" className="scatter-img img-L2 fade-on-scroll" />
+          <img src="images/wrestler3.jpg" alt="Wrestling" className="scatter-img img-L3 fade-on-scroll" /> 
+          <img src="images/wrestler4.jpg" alt="Wrestling" className="scatter-img img-R1 fade-on-scroll" />
+          <img src="images/wrestler5.jpg" alt="Wrestling" className="scatter-img img-R2 fade-on-scroll" />
         </div>
 
         <div className="centered-text-box fade-on-scroll">
@@ -77,7 +77,7 @@ const Home = () => {
         <section className="log-panel">
           <div className="panel-container">
             <div className="log-group pos-1 fade-on-scroll">
-              <div className="log-media"><img src="/images/coaches.jpg" alt="Coaching" /></div>
+              <div className="log-media"><img src="images/coaches.jpg" alt="Coaching" /></div>
               <div className="log-callout callout-1">
                 <div className="connector-line-white"></div>
                 <div className="connector-dot-red"></div>
@@ -96,7 +96,7 @@ const Home = () => {
         <section className="log-panel">
           <div className="panel-container">
             <div className="log-group pos-2 fade-on-scroll">
-              <div className="log-media"><img src="/images/womens.jpg" alt="Women's Team" /></div>
+              <div className="log-media"><img src="images/womens.jpg" alt="Women's Team" /></div>
               <div className="log-callout callout-2">
                 <div className="connector-line-white"></div>
                 <div className="connector-dot-red"></div>
@@ -114,7 +114,7 @@ const Home = () => {
         <section className="log-panel">
           <div className="panel-container">
             <div className="log-group pos-3 fade-on-scroll">
-              <div className="log-media"><img src="/images/practice.jpg" alt="Practice" /></div>
+              <div className="log-media"><img src="images/practice.jpg" alt="Practice" /></div>
               <div className="log-callout callout-3">
                 <div className="connector-line-white"></div>
                 <div className="connector-dot-red"></div>
@@ -133,7 +133,7 @@ const Home = () => {
         <section className="log-panel">
           <div className="panel-container">
             <div className="log-group pos-4 fade-on-scroll">
-              <div className="log-media"><img src="/images/forms.jpg" alt="Gear" /></div>
+              <div className="log-media"><img src="images/forms.jpg" alt="Gear" /></div>
               <div className="log-callout callout-4">
                 <div className="connector-line-white"></div>
                 <div className="connector-dot-red"></div>
@@ -154,7 +154,7 @@ const Home = () => {
 
       {/* RESTORED: Fullscreen Banner */}
       <section className="fullscreen-banner fade-on-scroll">
-        <img src="/images/home-break.jpg" alt="Maryland Wrestling Team Banner" />
+        <img src="images/home-break.jpg" alt="Maryland Wrestling Team Banner" />
       </section>
 
       {/* RESTORED: Bottom Separator Line */}
@@ -192,7 +192,7 @@ const Home = () => {
             </div>
 
             <div className="comp-image-wrapper">
-              <img src="/images/national-success.jpg" alt="Competitive Wrestling Team" />
+              <img src="images/national-success.jpg" alt="Competitive Wrestling Team" />
             </div>
           </div>
         </div>

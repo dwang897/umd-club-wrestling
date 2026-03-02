@@ -3,16 +3,15 @@ import React, { useEffect, useRef } from 'react';
 const Comp = () => {
   const scrollRef = useRef(null);
 
-  // Match Data - Moved from your script tag
+  // Match Data - 🔴 Fixed local image paths (removed leading /)
   const matches = [
     { id: 1, date: "Sat Feb 07", event: "Conference Duals (UMBC)", opponentLogo: "https://styleguide.umbc.edu/wp-content/uploads/sites/113/2019/09/UMBCretrievers_JUSTHEAD-on-white-or-black.png", location: "Baltimore, MD", type: "Away", color: "#FFC20E" },
-    { id: 2, date: "Sat Feb 21", event: "Home Tri Meet (TBD)", opponentLogo: "/images/umd-logo.png", location: "College Park, MD", type: "Home", color: "#E31130" },
+    { id: 2, date: "Sat Feb 21", event: "Home Tri Meet (TBD)", opponentLogo: "images/umd-logo.png", location: "College Park, MD", type: "Home", color: "#E31130" },
     { id: 3, date: "Sat Mar 14", event: "Conference Championships", opponentLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvceyVdhzbFLKWaLJ3PMtcg0Arqu8SxnUeHg&s", location: "Bensalem, PA", type: "Away", color: "#00205B" },
     { id: 4, date: "Mar 25–28", event: "National Championships", opponentLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvceyVdhzbFLKWaLJ3PMtcg0Arqu8SxnUeHg&s", location: "Shreveport, LA", type: "Away", color: "#00205B" },
-    { id: 5, date: "Oct 2026", event: "Season Opener (TBA)", opponentLogo: "/images/umd-logo.png", location: "TBA", type: "Home", color: "#E31130" }
+    { id: 5, date: "Oct 2026", event: "Season Opener (TBA)", opponentLogo: "images/umd-logo.png", location: "TBA", type: "Home", color: "#E31130" }
   ];
 
-  // Scroll logic for buttons
   const scroll = (direction) => {
     if (scrollRef.current) {
       const scrollAmount = direction === 'left' ? -400 : 400;
@@ -20,23 +19,31 @@ const Comp = () => {
     }
   };
 
-  // Fade Observer for animations
+  // Fade Observer - 🔴 Updated with Jitter Fix & Disconnect
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
-    }, { threshold: 0.1 });
+      entries.forEach(entry => {
+        if (entry.intersectionRatio >= 0.15) {
+          entry.target.classList.add('is-visible');
+        } 
+        else if (entry.intersectionRatio === 0) {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: [0, 0.15] });
 
     const fadeElements = document.querySelectorAll('.fade-on-scroll');
     fadeElements.forEach(el => observer.observe(el));
 
-    return () => fadeElements.forEach(el => observer.unobserve(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="comp-page-override">
       <section className="comp-hero-stage">
         <div className="comp-hero-image">
-          <img src="/images/comp-page.jpg" alt="Competitive Wrestling Action" />
+          {/* 🔴 Fixed hero image path */}
+          <img src="images/comp-page.jpg" alt="Competitive Wrestling Action" />
         </div>
         <div className="comp-hero-overlay">
           <div className="hero-content fade-on-scroll">

@@ -48,7 +48,7 @@ const Contact = () => {
             {/* Background Image Wrapper */}
             <div className="contact-bg-wrapper">
                 <img 
-                    src="/images/contact.jpg" 
+                    src="images/contact.jpg" 
                     alt="Maryland Wrestling Practice" 
                     className="contact-bg-img" 
                 />
