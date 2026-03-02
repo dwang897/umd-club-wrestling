@@ -1,15 +1,16 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-  // Migration of your Fade Observer from script.js
+  // Migration of your Fade Observer with Hysteresis/Jitter Fix
   useEffect(() => {
     const scrollObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        // 1. FADE IN: Only trigger when the element is at least 15% visible
+        // 1. FADE IN: Trigger at 15% visibility
         if (entry.intersectionRatio >= 0.15) {
           entry.target.classList.add('is-visible');
         } 
-        // 2. FADE OUT: Only trigger when the element is 100% off-screen
+        // 2. FADE OUT: Only reset when 100% off-screen
         else if (entry.intersectionRatio === 0) {
           entry.target.classList.remove('is-visible');
         }
@@ -62,8 +63,8 @@ const Home = () => {
         </div>
 
         <div className="centered-text-box fade-on-scroll">
-          <p>Short description of our club right here. Something about how we wrestle, are successful, but also are a community, do things outside of wrestling such as a social events and philanthropy etc just fill some stuff.</p>
-          <p>Short description of how we welcome everyone to the club. For example, there is no commitment to how often you come, no dues, no experience required, all genders welcome.</p>
+          <p>The UMD Wrestling Club is a student-run organization dedicated to fostering a competitive and supportive environment for wrestlers of all skill levels. Whether you are a seasoned competitor or brand new to the mat, we provide the coaching and community needed to succeed.</p>
+          <p>We welcome everyone to the club. There is no strict commitment to how often you come, no experience required, and all genders are welcome to join our ranks.</p>
           <p>For information for new members, keep scrolling.</p>
         </div>
       </section>
@@ -149,15 +150,12 @@ const Home = () => {
         </section>
       </div>
 
-      {/* RESTORED: Top Separator Line */}
       <div className="separator-line"></div>
 
-      {/* RESTORED: Fullscreen Banner */}
       <section className="fullscreen-banner fade-on-scroll">
         <img src="images/home-break.jpg" alt="Maryland Wrestling Team Banner" />
       </section>
 
-      {/* RESTORED: Bottom Separator Line */}
       <div className="separator-line"></div>
 
       {/* COMPETITIVE SECTION */}
@@ -180,14 +178,14 @@ const Home = () => {
               </div>
 
               <div className="comp-nav-tabs">
-                <a href="/competitive" className="comp-tab tab-learn">
+                <Link to="/competitive" className="comp-tab tab-learn">
                   <span>Learn More</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="/contact" className="comp-tab tab-question">
+                </Link>
+                <Link to="/contact" className="comp-tab tab-question">
                   <span>Contact Us</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </a>
+                </Link>
               </div>
             </div>
 
