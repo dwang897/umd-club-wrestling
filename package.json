@@ -1,8 +1,9 @@
 {
-  "name": "maryland-wrestling",
+  "name": "umd-club-wrestling",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "https://dwang897.github.io/umd-club-wrestling",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
