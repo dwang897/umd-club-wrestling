@@ -7,7 +7,7 @@ const Footer = () => {
   <div className="footer-line"></div>
   <div className="footer-container">
     <div className="footer-left">
-      <img src="/images/umd-logo.png" alt="Maryland Wrestling" className="footer-logo" />
+      <img src="images/umd-logo.png" alt="Maryland Wrestling" className="footer-logo" />
       <div className="footer-credits">
         <p>&copy; 2026 Maryland Club Wrestling</p>
         <p className="footer-disclaimer">

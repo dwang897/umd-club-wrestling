@@ -68,7 +68,7 @@ const Navbar = () => {
                 {/* Logo Section */}
                 <div className="logo-left">
                     <Link to="/" className="brand-link" onClick={() => setIsMenuOpen(false)}>
-                        <img src="/images/umd-logo.png" alt="UMD Logo" className="umd-logo-main" />
+                        <img src="images/umd-logo.png" alt="UMD Logo" className="umd-logo-main" />
                     </Link>
                 </div>
 
