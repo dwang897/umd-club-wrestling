@@ -773,7 +773,7 @@ body {
 }
 
 /* =========================================
-   COMPETITIVE PAGE (comp.html)
+   COMPETITIVE PAGE (competitive.html)
 ========================================= */
 .comp-hero-stage {
   position: relative;
@@ -1849,6 +1849,34 @@ body {
     transform: translateX(150%) translateY(20px) rotateZ(10deg);
     opacity: 0;
     pointer-events: none;
+  }
+
+  .rb-nav-container {
+    top: 20px; 
+    right: 5%;
+    z-index: 1000; 
+    display: flex !important; 
+    gap: 10px;
+  }
+
+  .rb-nav-btn {
+    width: 44px; 
+    height: 44px;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rb-nav-btn svg {
+    width: 20px !important; 
+    height: 20px !important;
+    display: block;
+    stroke: white; 
+  }
+
+  .rb-massive-title {
+    bottom: 70%; 
   }
 }
 
