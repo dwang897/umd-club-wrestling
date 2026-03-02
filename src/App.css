@@ -1,0 +1,31 @@
+.carousel-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px; /* Essential for the 3D effect */
+}
+
+.officer-card {
+  position: absolute;
+  width: 320px;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Your squircle look */
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 3D Rotation Positioning */
+.officer-card.active { transform: translateX(0) scale(1.1); z-index: 10; opacity: 1; }
+.officer-card.prev { transform: translateX(-100%) rotateY(30deg) scale(0.8); z-index: 5; opacity: 0.5; }
+.officer-card.next { transform: translateX(100%) rotateY(-30deg) scale(0.8); z-index: 5; opacity: 0.5; }
+.officer-card.hidden { opacity: 0; z-index: 1; }
+
+.card-image img { width: 100%; height: 250px; object-fit: cover; }
+.card-content { padding: 20px; text-align: left; }
+.officer-role { color: #E31130; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+.officer-name { font-size: 1.4rem; margin: 5px 0; }
+.officer-desc { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
