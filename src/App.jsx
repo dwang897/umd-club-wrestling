@@ -4,7 +4,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // Layout Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop'; // 🔴 Essential for the Footer fix
+import ScrollToTop from './components/ScrollToTop'; 
 
 // Page Components
 import Home from './pages/Home';
@@ -15,7 +15,6 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      {/* 🔴 ScrollToTop must be inside Router but outside Routes to monitor URL changes */}
       <ScrollToTop />
       
       {/* Permanent UI elements */}

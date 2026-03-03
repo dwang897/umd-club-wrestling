@@ -1365,7 +1365,6 @@ body {
   object-fit: cover;
 }
 
-/* 🔴 This must be flex-direction: column to keep bio under the name */
 .rb-card-info {
   display: flex;
   flex-direction: column;
@@ -1916,7 +1915,6 @@ body {
 .back-home-btn {
   display: inline-block; /* Changed from inline-flex for text centering */
   margin-top: 30px;
-  /* 🔴 Applied identical padding/styles as the submit button, minus the icon gap */
   padding: 16px 35px; 
   background-color: var(--umd-red); /* Solid UMD Red */
   border: none;
@@ -1933,7 +1931,6 @@ body {
 }
 
 .back-home-btn:hover {
-  /* 🔴 Matching hover effect of primary buttons */
   transform: translateY(-3px);
   background-color: #f01435; /* Slightly brighter red for interaction */
 }

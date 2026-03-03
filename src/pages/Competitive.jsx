@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react';
 const Comp = () => {
   const scrollRef = useRef(null);
 
-  // Match Data - 🔴 Fixed local image paths (removed leading /)
   const matches = [
     { id: 1, date: "Sat Feb 07", event: "Conference Duals (UMBC)", opponentLogo: "https://styleguide.umbc.edu/wp-content/uploads/sites/113/2019/09/UMBCretrievers_JUSTHEAD-on-white-or-black.png", location: "Baltimore, MD", type: "Away", color: "#FFC20E" },
     { id: 2, date: "Sat Feb 21", event: "Home Tri Meet (TBD)", opponentLogo: "images/umd-logo.png", location: "College Park, MD", type: "Home", color: "#E31130" },
@@ -19,7 +18,6 @@ const Comp = () => {
     }
   };
 
-  // Fade Observer - 🔴 Updated with Jitter Fix & Disconnect
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -42,7 +40,6 @@ const Comp = () => {
     <div className="comp-page-override">
       <section className="comp-hero-stage">
         <div className="comp-hero-image">
-          {/* 🔴 Fixed hero image path */}
           <img src="images/comp-page.jpg" alt="Competitive Wrestling Action" />
         </div>
         <div className="comp-hero-overlay">

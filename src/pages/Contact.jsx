@@ -26,7 +26,6 @@ const Contact = () => {
         e.preventDefault();
         setStatus("SUBMITTING");
         
-        // 🔴 REPLACE 'YOUR_FORM_ID' with the unique ID from your Formspree dashboard
         const response = await fetch("https://formspree.io/f/mdalvqdp", {
             method: "POST",
             headers: { 
@@ -71,7 +70,6 @@ const Contact = () => {
                         <h3>Message Sent!</h3>
                         <p>Thanks for reaching out. We'll get back to you soon.</p>
                         
-                        {/* 🔴 RED SOLID BUTTON */}
                         <Link to="/" className="back-home-btn">
                             Back to Home
                         </Link>

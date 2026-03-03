@@ -4,7 +4,6 @@ const Officers = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const team = [
-        // 🔴 Removed leading / from all image paths
         { id: 1, name: "Mikael Gandilyan", role: "President", bio: "\"Be water, my friend\" - Bruce Lee", img: "images/president.jpeg" },
         { id: 2, name: "McKinley Jovanovic", role: "Vice President", bio: "Favorite move: Fireman's Carry", img: "images/vice-president.jpeg" },
         { id: 3, name: "Andrew Campbell", role: "Coach", bio: "Focusing on technical fundamentals and high-level match strategy.", img: "images/coach1.jpeg" },
@@ -24,7 +23,6 @@ const Officers = () => {
         if (activeIndex > 0) setActiveIndex(activeIndex - 1);
     };
 
-    // 🔴 Updated logic to handle relative image path fallback and the Jitter Fix
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -48,7 +46,6 @@ const Officers = () => {
     return (
         <div className="rb-officers-page">
             <section className="rb-hero">
-                {/* 🔴 Removed leading / from hero image */}
                 <img src="images/officer-page.jpeg" alt="Maryland Wrestling Action" className="rb-hero-img" />
                 <div className="rb-hero-gradient"></div>
                 <h1 className="rb-massive-title fade-on-scroll">Officers</h1>
@@ -89,7 +86,6 @@ const Officers = () => {
                         return (
                             <div key={member.id} className={`rb-card-wrapper ${positionClass}`}>
                                 <div className="rb-image-container">
-                                    {/* 🔴 Fallback image also updated to relative path */}
                                     <img src={member.img} alt={member.name} onError={(e) => e.target.src = 'images/umd-logo.png'} />
                                 </div>
                                 <div className="rb-card-info">
